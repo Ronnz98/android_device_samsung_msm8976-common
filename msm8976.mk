@@ -130,6 +130,8 @@ PRODUCT_PACKAGES += \
 #    camera.msm8952 \
 #    libshims_camera
 
+PRODUCT_NO_CAMERA := true
+
 # Configstore
 PRODUCT_PACKAGES += \
     disable_configstore
