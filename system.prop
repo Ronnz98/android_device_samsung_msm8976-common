@@ -100,3 +100,7 @@ persist.timed.enable=true
 
 # WiFi
 wifi.interface=wlan0
+
+#RIL
+ro.telephony.default_network=9
+telephony.lteOnGsmDevice=1
