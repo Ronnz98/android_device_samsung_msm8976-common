@@ -104,3 +104,6 @@ wifi.interface=wlan0
 #RIL
 ro.telephony.default_network=9
 telephony.lteOnGsmDevice=1
+rro.data.dst_mp_num_channels=4
+ro.ril.gprsclass=10
+ro.telephony.call_ring.delay=3000
