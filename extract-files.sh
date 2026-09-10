@@ -30,6 +30,14 @@ if [ ! -f "$HELPER" ]; then
 fi
 . "$HELPER"
 
+function blob_fixup() {
+    case "${1}" in
+    vendor/lib/libsec-ril.so|vendor/lib64/libsec-ril.so)
+        "${PATCHELF}" --add-needed "libshims_rild_socket.so" "${2}"
+        ;;
+    esac
+}
+
 while getopts ":nhsd:" options
 do
   case $options in
