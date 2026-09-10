@@ -1,5 +1,9 @@
-allow rild proc_net:file w_file_perms;
+# Erlaube Zugriff auf die EFS-Partition im Allgemeinen
+allow rild efs_file:dir r_dir_perms;
+allow rild efs_file:file r_file_perms;
 
-r_dir_file(rild, app_efs_file)
+# Erlaube dem alten Daemon, Sockets für die Kommunikation zu erstellen
+allow rild rild_socket:sock_file { create setattr unlink };
 
-# set_prop(rild, system_radio_prop)
+# Erlaube das Setzen von Radio-Eigenschaften
+set_prop(rild, radio_prop)
