@@ -19,7 +19,7 @@
 
 BOARD_VENDOR := samsung
 VENDOR_PATH := device/samsung/msm8976-common
-
+QCOM_BOARD_PLATFORMS += msm8952
 TARGET_SPECIFIC_HEADER_PATH := $(VENDOR_PATH)/include
 
 # Use Snapdragon LLVM, if available
